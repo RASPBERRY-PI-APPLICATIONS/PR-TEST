@@ -15,4 +15,4 @@ jobs:
          - uses: mshick/add-pr-comment@v2
            with:
               message: |
-                 [![Build NextApp Preview and Deploy](https://github.com/dogdb-org/dogdb-frontend/actions/workflows/preview.yaml/badge.svg?branch=CD-deployment\&event=push)](https://github.com/dogdb-org/dogdb-frontend/actions/workflows/preview.yaml) 
+                 [![Build NextApp Preview and Deploy](https://github.com/dogdb-org/dogdb-frontend/actions/workflows/preview.yaml/badge.svg?branch=CD-deployment\&event=push)](https://github.com/dogdb-org/dogdb-frontend/actions/workflows/preview.yaml) thanks
