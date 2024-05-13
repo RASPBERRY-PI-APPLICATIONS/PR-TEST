@@ -1,0 +1,19 @@
+name: 
+on:
+    push:
+        branches: [main]
+    pull_request_target:
+        types: [opened]
+    pull_request_review_comment:
+        types: [created]
+
+jobs:
+    welcome:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+              # - uses: dogdb
+              with:
+                  github-token: ${{ secrets.GITHUB_TOKEN }} 
+                  pr-message: '[![Build NextApp Preview and Deploy](https://github.com/dogdb-org/dogdb-frontend/actions/workflows/preview.yaml/badge.svg?branch=${{github.ref_name}}\&event=push)](https://github.com/dogdb-org/dogdb-frontend/actions/workflows/preview.yaml)    [DogDB - ${{github.ref_name}} link](https://preview.dogdb.org/${{secrets.DOGDB_PREVIEW_FRONTEND_FOLDER_NAME}}/${{secrets.DOGDB_PREVIEW_FRONTEND_FOLDER_NAME}}-${{ github.ref_name }}/out)'
+                  footer: 'awesome!</b>'
